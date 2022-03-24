@@ -60,12 +60,12 @@ def isWinner(bo, le):
 
     return ((bo[7] == le and bo[8] == le and bo[9]== le) or # across the top
             (bo[4] == le and bo[5] == le and bo[6] == le) or # across the middle
-            (bo[4] == le and bo[5] == le and bo[6] == le) or # across the bottom
-            (bo[4] == le and bo[5] == le and bo[6] == le) or # down the left side
-            (bo[4] == le and bo[5] == le and bo[6] == le) or # down the middle
-            (bo[4] == le and bo[5] == le and bo[6] == le) or # down the right side
-            (bo[4] == le and bo[5] == le and bo[6] == le) or # diagonal
-            (bo[4] == le and bo[5] == le and bo[6] == le)) # diagonal
+            (bo[1] == le and bo[2] == le and bo[3] == le) or # across the bottom
+            (bo[7] == le and bo[4] == le and bo[1] == le) or # down the left side
+            (bo[8] == le and bo[5] == le and bo[2] == le) or # down the middle
+            (bo[9] == le and bo[6] == le and bo[3] == le) or # down the right side
+            (bo[7] == le and bo[5] == le and bo[3] == le) or # diagonal
+            (bo[9] == le and bo[5] == le and bo[1] == le)) # diagonal
 
 def getBoardCopy(board):
     # Make a duplicate of the board list and return it the duplicate.
